@@ -1,0 +1,16 @@
+spring:
+  main:
+    web-application-type: NONE
+  application:
+    name: WiremockApiServer
+
+wiremock:
+  port: 9090
+
+
+logging:
+  level:
+    com:
+      github:
+        tomakehurst:
+          wiremock: DEBUG

@@ -1,0 +1,16 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/api/user",
+    "bodyPatterns": [
+      { "matchesJsonPath": "$.name" }
+    ]
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{ \"status\": \"User created successfully\" }"
+  }
+}
