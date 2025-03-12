@@ -13,13 +13,10 @@ public class WireMockConfig {
 
   private final WireMockServer wireMockServer;
 
-  @Value("${wiremock.port:8085}")
-  private int wireMockPort;
-
-  public WireMockConfig() {
+  public WireMockConfig(@Value("${wiremock.port:8085}")  int wireMockPort) {
     this.wireMockServer = new WireMockServer(
         WireMockConfiguration.wireMockConfig()
-            .port(9090)
+            .port(wireMockPort)
             .usingFilesUnderClasspath("wiremock")
     );
     this.wireMockServer.start();
